@@ -1,0 +1,105 @@
+.Weather {
+    max-width: 600px;
+    margin: 30px auto;
+    background-image: linear-gradient(-225deg, #fff2ff 0%, #d7fffe 100%);
+    padding: 20px;
+    border: 1px solid #aaf7f5;
+    border-radius: 10px;
+    color: #c471ff;
+    margin-bottom: 8px;
+  }
+  .Weather h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10;
+  }
+  .Weather ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+  }
+  .Weather li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #a332f4;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: capitalize;
+  }
+  .Weather .Overview {
+    margin-bottom: 10px;
+  }
+  .Weather .weatherTemperature img {
+    margin-right: 10px;
+    height: 64px;
+    width: 64px;
+    margin-bottom: 10px;
+  }
+  .Weather .weatherTemperature strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1;
+    color: #c471ff;
+  }
+  .Weather .weatherTemperature .units {
+    position: relative;
+    font-size: 18px;
+    top: -32px;
+  }
+  .Weather .units a {
+    text-decoration: none;
+  }
+  .icon {
+    background-color: #e8c8ff;
+    border-radius: 5px;
+  }
+  .Weather .weatherForecast {
+    color: c471ff;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .Weather .weatherForecast img {
+    background-color: #e8c8ff;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .Weather .weatherForecastDate {
+    font-size: 20px;
+    opacity: 0.6;
+  }
+  .Weather .weatherForecastTemperatures {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .Weather .weather-forecast-temperature-min {
+    opacity: 0.6;
+  }
+  .Weather .by {
+    text-align: center;
+    font-size: 13px;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  .Weather .btn {
+    background: #c471ff;
+    border: none;
+  }
+  .Weather .btn-primary :hover {
+    background: #c471ff;
+    cursor: pointer;
+    background-color: #c471ff;
+  }
+  .Weather .btn-primary:hover {
+    color: #c471ff;
+    background-color: #e8c8ff;
+    border-color: #c471ff;
+    transition: inherit;
+  }
+  .Weather .weather-temperature .active {
+    color: #c471ff;
+    cursor: default;
+  }
