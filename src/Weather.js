@@ -27,10 +27,10 @@ export default function Weather() {
             <div className="float-left">
                 <strong>45</strong>
                 <span className="units">
-                <a href="#" class="active">
+                <button class="active">
                     °F
-                </a>{" "}
-                |<a href="#">°C</a>
+                </button>{" "}
+                |<button>°C</button>
                 </span>
             </div>
             </div>
