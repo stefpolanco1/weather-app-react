@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import Form from "./Form";
 import Footer from "./Footer";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -10,7 +11,7 @@ export default function Weather(props) {
 
         setWeatherData ({
             ready: true,
-            date: "Sunday 14:00",
+            date: new Date(response.data.dt * 1000),
             temperature: response.data.main.temp,
             description: response.data.weather[0].description,
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
@@ -28,10 +29,9 @@ export default function Weather(props) {
                 <div className="Overview">
                 <h1>{weatherData.city}</h1>
                 <ul>
-                    <li>
-                    ✨ Last Updated: <span>{weatherData.date}</span>
+                    <li> ✨ Last Updated:<span><FormattedDate date={weatherData.date} /></span>
                     </li>
-                    <li>{weatherData.description}</li>
+                    <li> {weatherData.description}</li>
                 </ul>
                 </div>
                 <div className="row">
@@ -56,8 +56,8 @@ export default function Weather(props) {
                 </div>
                 <div className="col-6">
                     <ul>
-                    <li>🥵 Humidity: {Math.round(weatherData.humidity)}%</li>
-                    <li>💨 Wind: {Math.round(weatherData.wind)} km/h</li>
+                    <li>🥵  Humidity: {Math.round(weatherData.humidity)}%</li>
+                    <li>💨  Wind: {Math.round(weatherData.wind)} km/h</li>
                     </ul>
                 </div>
                 <div className="weatherForecast"></div>
