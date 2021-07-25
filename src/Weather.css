@@ -28,7 +28,7 @@
     line-height: 23px;
     text-transform: capitalize;
   }
-  .Weather .Overview {
+  .footer {
     margin-bottom: 10px;
   }
   .Weather .weatherTemperature img {

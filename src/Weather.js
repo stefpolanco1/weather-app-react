@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Weather.css";
-import Form from "./Form";
 import Footer from "./Footer";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
 export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false});
+    const [city, setCity] = useState (props.defaultCity);
     function handleResponse(response) {
-
         setWeatherData ({
             ready: true,
             date: new Date(response.data.dt * 1000),
@@ -20,56 +19,48 @@ export default function Weather(props) {
             city: response.data.name
         });
     }
-    
-    
+    function search() {
+        const apiKey = "bc7335652f55946eb62094f23f654f47";
+        let units = "imperial";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+        axios.get(apiUrl).then(handleResponse);  
+    }
+    function handleSubmit(event) {
+        event.preventDefault();
+        search();
+    }
+    function handleCityChange(event) {
+        setCity(event.target.value);
+    }
+
     if (weatherData.ready) {
         return (
             <div className="Weather">
-                <Form />
-                <div className="Overview">
-                <h1>{weatherData.city}</h1>
-                <ul>
-                    <li> ✨ Last Updated:<span><FormattedDate date={weatherData.date} /></span>
-                    </li>
-                    <li> {weatherData.description}</li>
-                </ul>
-                </div>
-                <div className="row">
-                <div className="col-6">
-                    <div className="d-flex weatherTemperature">
-                    <img
-                        src={weatherData.iconUrl}
-                        alt={weatherData.description}
-                        className="icon"
-                        width="42"
-                    />
-                    <div className="float-left">
-                        <strong>{Math.round(weatherData.temperature)}</strong>
-                        <span className="units">
-                        <button class="active">
-                            °F
-                        </button>{" "}
-                        |<button>°C</button>
-                        </span>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-6">
-                    <ul>
-                    <li>🥵  Humidity: {Math.round(weatherData.humidity)}%</li>
-                    <li>💨  Wind: {Math.round(weatherData.wind)} km/h</li>
-                    </ul>
-                </div>
-                <div className="weatherForecast"></div>
+                <div>
+                    <form onSubmit={handleSubmit} className="mb-3">
+                        <div className="row">
+                        <div className="col-9">
+                            <input
+                            type="search"
+                            placeholder="Search a city 🏙..."
+                            className="form-control"
+                            id="city-input"
+                            autocomplete="off"
+                            onChange={handleCityChange}
+                            />
+                        </div>
+                        <div className="col-3">
+                            <input type="submit" value="Search" className="btn btn-primary w-100" />
+                        </div>
+                        </div>
+                    </form>
+                    <WeatherInfo data={weatherData} />
                 </div>
                 <Footer />
-            </div>);
+            </div>
+        );
     } else {
-        const apiKey = "bc7335652f55946eb62094f23f654f47";
-        let units = "imperial";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
-        axios.get(apiUrl).then(handleResponse);
-
+        search();
         return "Loading...";
     }
 }
