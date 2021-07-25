@@ -31,33 +31,34 @@
   .footer {
     margin-bottom: 10px;
   }
-  .Weather .weatherTemperature canvas {
+  .Weather .weatherDetails canvas {
     margin-right: 5px;
     margin-bottom: 5px;
     padding: 5px;
     display: inline-block;
   }
-  .Weather .weatherTemperature strong {
+  .Weather .weatherDetails .temperature {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 54px;
     font-weight: 400;
     line-height: 1;
     color: #c471ff;
   }
-  .Weather .weatherTemperature .units {
+  .Weather .weatherDetails .units {
     position: relative;
     font-size: 18px;
-    top: -32px;
+    top: -30px;
   }
-  .Weather .units a {
+  /* .Weather .units a {
     text-decoration: none;
-  }
-  button {
+    
+  } */
+  /* button {
     color: #a332f4;
     border: none;
     font-size: 14px;
     background-image: linear-gradient(-225deg, #fff2ff 0%, #d7fffe 100%);
-  }
+  } */
   .icon {
     background-color: #e8c8ff;
     border-radius: 5px;
