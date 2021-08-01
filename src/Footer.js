@@ -6,8 +6,7 @@ export default function Footer() {
       <small className="by">
           This project was coded by Stefanie Polanco 👩🏾‍💻 and is {" "}
           <a href="https://github.com/stefpolanco1/weather-app-react"
-          target="_blank" rel="noreferrer"
-          rel="noopener noreferrer">
+          target="_blank" rel="noreferrer">
               open-sourced on Github
           </a>
       </small>
