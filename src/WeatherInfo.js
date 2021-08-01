@@ -16,7 +16,7 @@ export default function WeatherInfo(props){
             <div className="row">
                 <div className="col-6">
                     <div className="d-flex weatherDetails">
-                    <WeatherIcon code={props.data.icon} size={50}/>
+                    <WeatherIcon code={props.data.icon}/>
                         <div className="float-left">
                             <ConversionUnits fahrenheit={props.data.temperature} />
                         </div>
@@ -28,7 +28,7 @@ export default function WeatherInfo(props){
                     <li>💨  Wind: {Math.round(props.data.wind)} km/h</li>
                     </ul>
                 </div>
-                
+                <div className="weatherForecast"></div>
             </div>
         </div>
     );

@@ -1,10 +1,8 @@
 .WeatherForecast {
-    color: c471ff;
+    color: #c471ff;
     text-align: center;
-    margin-top: 20px;
   }
 .WeatherForecast canvas {
-    background-color: #e8c8ff;
     border-radius: 5px;
     margin-top: 5px;
   }
@@ -13,8 +11,8 @@
     opacity: 0.6;
   }
 .WeatherForecast-temperature {
-    /* font-size: 16px; */
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin-bottom: 20px;
   }
   .WeatherForecast-temperature-min {
     opacity: 0.8;

@@ -46,29 +46,16 @@ li {
     font-size: 18px;
     top: -30px;
   }
-  /* .Weather .units a {
-    text-decoration: none;
-    
-  } */
-  /* button {
-    color: #a332f4;
-    border: none;
-    font-size: 14px;
-    background-image: linear-gradient(-225deg, #fff2ff 0%, #d7fffe 100%);
-  } */
-  .icon {
+  /* .icon {
     background-color: #e8c8ff;
     border-radius: 5px;
-  }
+  } */
   .footer {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 10px;  }
   .Weather .by {
     text-align: center;
     font-size: 13px;
     font-family: "Courier New", Courier, monospace;
-    margin-top: 10px;
     text-decoration: none;
   }
   .Weather .btn {
