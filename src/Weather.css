@@ -8,18 +8,18 @@
     color: #c471ff;
     margin-bottom: 8px;
   }
-  .Weather h1 {
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     text-align: center;
     margin-bottom: 10;
   }
-  .Weather ul {
+ul {
     margin: 0;
     padding: 0;
     font-weight: 100;
   }
-  .Weather li {
+li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -27,9 +27,6 @@
     font-size: 18px;
     line-height: 23px;
     text-transform: capitalize;
-  }
-  .footer {
-    margin-bottom: 10px;
   }
   .Weather .weatherDetails canvas {
     margin-right: 5px;
@@ -63,26 +60,9 @@
     background-color: #e8c8ff;
     border-radius: 5px;
   }
-  .Weather .weatherForecast {
-    color: c471ff;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .Weather .weatherForecast canvas {
-    background-color: #e8c8ff;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
-  .Weather .weatherForecastDate {
-    font-size: 20px;
-    opacity: 0.6;
-  }
-  .Weather .weatherForecastTemperatures {
-    font-size: 16px;
-    margin-top: 5px;
-  }
-  .Weather .weather-forecast-temperature-min {
-    opacity: 0.6;
+  .footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .Weather .by {
     text-align: center;
